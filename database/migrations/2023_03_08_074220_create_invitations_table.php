@@ -16,7 +16,7 @@ class CreateInvitationsTable extends Migration
             $table->unsignedBigInteger('doctor_id')->constrained('doctors');
             $table->string('code')->unique();
             $table->boolean('used');
-            $table->timestamps('expires_at');
+            $table->date('expires_at');
             $table->timestamps();
         });
     }

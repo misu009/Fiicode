@@ -26,7 +26,6 @@
 </head>
 
 <body>
-    {{-- NAVBAR --}}
     <section class="inregistrare">
         <div class="card-group ">
             <div class="row">
@@ -37,61 +36,61 @@
                                 <div class="login-card">
                                     <form id="form" action="{{ route('register.pacient.istoric') }}">
                                         <div class="row">
-                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="code"
-                                                    id="code" placeholder="*COD inregistrare" required
-                                                    class="input-register" type="text">
-                                            </div>
-                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input id="nume"
-                                                    name="nume" placeholder="*Nume" required class="input-register"
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="nume"
+                                                    id="nume" placeholder="*Nume" required class="input-register"
                                                     type="text">
                                             </div>
 
-                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input id="prenume"
-                                                    name="prenume" placeholder="*Prenume" required
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="prenume"
+                                                    id="prenume" placeholder="*Prenume" required
                                                     class="input-register" type="text">
                                             </div>
-                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input id="email"
-                                                    name="email" placeholder="*E-mail" required class="input-register"
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="email"
+                                                    id="email" placeholder="*E-mail" required class="input-register"
                                                     type="email">
                                             </div>
-                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input id="password"
-                                                    name="password" placeholder="*Parola" required
-                                                    class="input-register" type="password">
+                                            <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="password"
+                                                    id="password" placeholder="*Parola" required class="input-register"
+                                                    type="password">
                                             </div>
                                             <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input
-                                                    id="data_nasterii" name="data_nasterii" placeholder="*Data Nasterii"
+                                                    name="data_nasterii" id="data_nasterii" placeholder="*Data Nasterii"
                                                     required class="input-register" type="date">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
                                                 <input placeholder="*Judet" required class="input-register"
-                                                    id="adresa" name="adresa" type="text">
+                                                    name="adresa" id="adresa" type="text">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
                                                 <input placeholder="*Loc." required class="input-register"
-                                                    id="adresa" name="adresa" type="text">
+                                                    name="adresa" id="adresa" type="text">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
                                                 <input placeholder="*Cartier" required class="input-register"
-                                                    id="adresa" name="adresa" type="text">
+                                                    name="adresa" id="adresa" type="text">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
                                                 <input placeholder="*Strada-nr" required class="input-register"
-                                                    id="adresa" name="adresa" type="text">
+                                                    name="adresa" id="adresa" type="text">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
-                                                <input placeholder="*Bloc" required class="input-register"
-                                                    id="adresa" name="adresa" type="number">
+                                                <input placeholder="Bloc"class="input-register" type="number"
+                                                    name="adresa" id="adresa">
                                             </div>
                                             <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
-                                                <input class="input-register" required placeholder="*Apartament"
-                                                    id="adresa" name="adresa" type="number" id="quantity"
-                                                    name="quantity" min="1">
+                                                <input class="input-register" placeholder="Apartament" type="number"
+                                                    name="adresa" id="adresa" id="quantity" name="quantity"
+                                                    min="1">
+                                            </div>
+                                            <div class=" col col-lg-12 col-md-12 col-sm-12 col-12">
+                                                <input class="file-input form-control input-register"
+                                                    placeholder="Atestat" type="file" name="atestat"
+                                                    id="">
                                             </div>
                                             <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+
                                                 <button value="submit"
-                                                    class="submit-login btn btn-success btn-sm">Mergi
-                                                    la pasul
-                                                    urmator
+                                                    class="submit-login btn btn-success btn-sm">Inregistrare
                                                 </button>
                                             </div>
                                         </div>
@@ -104,6 +103,7 @@
             </div>
         </div>
     </section>
+
 </body>
 
 </html>

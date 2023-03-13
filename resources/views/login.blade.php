@@ -36,14 +36,14 @@
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><label class="label-login"
                             for="email"><span class="label-text">Adresa
                                 e-mail</span></label></div>
-                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input required name="email"
-                            class="input-login" type="email">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="email" id="email" required
+                            name="email" class="input-login" type="email">
                     </div>
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><label class="label-login"
                             for="parola"><span class="label-text">Parola</span></label>
                     </div>
-                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input required name="parola"
-                            class="input-login" type="password">
+                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="password" id="password" required
+                            name="parola" class="input-login" type="password">
                     </div>
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                         <button value="submit" class="submit-login btn btn-success btn-sm">
@@ -52,11 +52,13 @@
                     <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                         <p class="nu-ai-cont">Nu ai cont?</p>
                     </div>
-                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
-                        <a href="{{ route('register.pacient') }}">Click aici pentru cont pacient</a>
+                    <div class="col col-lg-6 col-md-6 col-sm-6 col-6">
+                        <a href="{{ route('register.pacient') }}">
+                            Inregistrare pacient</a>
+
                     </div>
-                    <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
-                        <a href="">Click aici pentru cont doctor</a>
+                    <div class="col col-lg-6 col-md-6 col-sm-6 col-6">
+                        <a href="{{ route('register.doctor') }}">Inregistrare doctor</a>
                     </div>
                 </div>
             </form>

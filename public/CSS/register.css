@@ -43,3 +43,9 @@ body {
     align-items: center;
 }
 
+.file-input
+{
+    display: inline-block;
+    margin-left: auto;
+    margin-right: auto;
+}

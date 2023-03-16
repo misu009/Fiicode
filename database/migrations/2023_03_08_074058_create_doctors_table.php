@@ -19,7 +19,6 @@ class CreateDoctorsTable extends Migration
             $table->string('password');
             $table->json('adresa');
             $table->date('data_nasterii');
-            $table->unsignedBigInteger('diploma_id')->constrained('diploms');
             $table->timestamps();
         });
     }

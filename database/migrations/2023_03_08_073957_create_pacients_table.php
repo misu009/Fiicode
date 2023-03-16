@@ -20,7 +20,7 @@ class CreatePacientsTable extends Migration
             $table->timestamp('data_nasterii');
             $table->json('adresa');
             $table->unsignedBigInteger('doctor_id')->constrained('doctors');
-            $table->unsignedBigInteger('istoric_medical_id')->constrained('istoric_medical');
+            $table->unsignedBigInteger('istoric_medical_id')->constrained('istoric_medical')->nullable();
             $table->timestamps();
         });
     }

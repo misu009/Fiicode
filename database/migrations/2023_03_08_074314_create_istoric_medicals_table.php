@@ -14,13 +14,13 @@ class CreateIstoricMedicalsTable extends Migration
         Schema::create('istoric_medicals', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('pacient_id')->constrained('pacients');
-            $table->json('alergii_si_intoleranta');
-            $table->json('boli_cronice_si_diagnostice');
-            $table->json('istoricul_de_boli_si_diagnostice');
-            $table->json('interventii_si_procedee_efectuate');
-            $table->json('servicii_medicale');
-            $table->json('imunizari');
-            $table->json('tratament_medicamentos');
+            $table->text('alergii_si_intoleranta');
+            $table->text('boli_cronice_si_diagnostice');
+            $table->text('istoricul_de_boli_si_diagnostice');
+            $table->text('interventii_si_procedee_efectuate');
+            $table->text('servicii_medicale');
+            $table->text('imunizari');
+            $table->text('tratament_medicamentos');
             $table->timestamps();
         });
     }

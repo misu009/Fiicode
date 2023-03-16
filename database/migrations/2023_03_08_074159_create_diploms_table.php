@@ -14,7 +14,7 @@ class CreateDiplomsTable extends Migration
         Schema::create('diploms', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('doctor_id')->constrained('doctors');
-            $table->string('image');
+            $table->string('document');
             $table->timestamps();
         });
     }

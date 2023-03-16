@@ -32,9 +32,9 @@ class Doctor extends Model
         'adresa' => 'array',
     ];
 
-    public function diploms(): HasOne
+    public function diploms(): HasMany
     {
-        return $this->hasOne(Diploma::class, 'diploma_id');
+        return $this->hasMany(Diploma::class, 'diploma_id');
     }
 
     public function invitatii(): HasMany

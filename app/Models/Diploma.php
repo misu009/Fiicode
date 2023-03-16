@@ -17,7 +17,8 @@ class Diploma extends Model
         'image',
     ];
 
-    public function doctor(): BelongsTo {
+    public function doctor(): BelongsTo
+    {
         return $this->belongsTo(Doctor::class, 'doctor_id');
     }
 }

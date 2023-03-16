@@ -14,7 +14,7 @@ class CreateInvitationsTable extends Migration
         Schema::create('invitations', function (Blueprint $table) {
             $table->id();
             $table->unsignedBigInteger('doctor_id')->constrained('doctors');
-            $table->string('code')->unique();
+            $table->string('code', 10)->unique();
             $table->boolean('used');
             $table->date('expires_at');
             $table->timestamps();

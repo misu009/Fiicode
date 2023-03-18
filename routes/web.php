@@ -42,3 +42,11 @@ Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
 
     Route::get('/program', [ProgramareController::class, 'doctorIndex'])->name('doctor.programare.index');
 });
+
+Route::get('/profil_doctor', function () {
+    return view('profiles/profil_doctor');
+});
+
+Route::get('/profil_pacient', function () {
+    return view('profiles/profil_pacient');
+});

@@ -33,25 +33,25 @@
 <body>
 
     {{-- NAVBAR --}}
+    <x-alert></x-alert>
     <section class="profile">
-        <div class="row">
-            <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
-                <div class="profile-pic">
-                    <label class="-label" for="file">
-                        <span class="glyphicon glyphicon-camera"></span>
-                        <span>Change Image</span>
-                    </label>
-                    <input id="file" type="file" onchange="loadFile(event)" />
-                    <img src="default-pp.png" id="output" width="200" />
+        <form class="row-form" action="submit">
+            <div class="row">
+                <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span>Change Image</span>
+                        </label>
+                        <input id="file" name="profil" type="file" onchange="loadFile(event)" />
+                        <img src="default-pp.png" id="output" width="200" />
+                    </div>
                 </div>
-            </div>
-            <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
-                <form class="edit-info" action="submit">
+                <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
                     <div class="row-form row">
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <h2>Informatii personale</h2>
                         </div>
-
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <input name="nume" id="nume" placeholder="Nume" required class="input-register"
                                 type="text">
@@ -63,14 +63,6 @@
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <input name="nume" id="nume" placeholder="Email" required class="input-register"
                                 type="text">
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
-                            <input name="nume" id="nume" placeholder="Parola" required class="input-register"
-                                type="text">
-                        </div>
-                        <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input name="confirm_password"
-                                id="confirm_password" placeholder="Confirma Parola" required class="input-register"
-                                type="password">
                         </div>
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <div class="adresa-row row">
@@ -96,13 +88,13 @@
                                 </div>
                                 <div class="col col-lg-4 col-md-4 col-sm-4 col-4">
                                     <input class="input-adresa input-register" placeholder="Ap." type="number"
-                                        name="apartament" id="apartament" id="quantity" name="quantity"
-                                        min="1">
+                                        name="apartament" id="apartament" id="quantity" name="quantity" min="1">
                                 </div>
                             </div>
-
                         </div>
-
+                        <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
+                            <h2>Adauga atestate</h2>
+                        </div>
                         <div class=" col col-lg-12 col-md-12 col-sm-12 col-12">
                             <input class="file-input form-control input-register" type="file" name="atestat[]"
                                 id="atestat" multiple>
@@ -112,9 +104,9 @@
                             </button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
-        </div>
+        </form>
     </section>
 </body>
 

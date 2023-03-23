@@ -13,6 +13,7 @@ class CreateDoctorsTable extends Migration
     {
         Schema::create('doctors', function (Blueprint $table) {
             $table->id();
+            $table->string('poza_profil')->nullable();
             $table->string('nume');
             $table->string('prenume');
             $table->string('email')->unique();

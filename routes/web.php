@@ -4,10 +4,7 @@ use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PacientController;
 use App\Http\Controllers\ProgramareController;
-use App\Http\Middleware\SignInDoctorCheck;
-use App\Http\Middleware\SignInPacientCheck;
 use Illuminate\Support\Facades\Route;
-use Illuminate\Support\Facades\Session;
 
 /*
 |--------------------------------------------------------------------------
@@ -33,12 +30,14 @@ Route::post('/sign_up_doctor', [DoctorController::class, 'sign_up'])->name('sign
 
 Route::group(['middleware' => ['pacient'], 'prefix' => 'pacient'], function () {
     Route::get('/', [PacientController::class, 'edit'])->name('pacient.pacient.edit');
+    Route::post('/update', [PacientController::class, 'update'])->name('pacient.pacient.update');
 
     Route::get('/program', [ProgramareController::class, 'pacientIndex'])->name('pacient.programare.index');
 });
 
 Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
     Route::get('/', [DoctorController::class, 'edit'])->name('doctor.doctor.edit');
+    Route::post('/update', [DoctorController::class, 'update'])->name('doctor.doctor.update');
 
     Route::get('/program', [ProgramareController::class, 'doctorIndex'])->name('doctor.programare.index');
 });
@@ -48,5 +47,5 @@ Route::get('/profil_doctor', function () {
 });
 
 Route::get('/profil_pacient', function () {
-    return view('profiles/profil_pacient');
+    return view('profiles.profil_pacient');
 });

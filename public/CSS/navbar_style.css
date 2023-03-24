@@ -1,0 +1,45 @@
+html,
+body {
+    font-size: 16px;
+    font-family: "Montserrat", sans-serif;
+}
+
+a {
+    font-weight: 500;
+}
+
+.navbar {
+    min-height: 6vh;
+    width: 95%;
+    margin: 5px auto;
+    border-radius: 27px;
+}
+
+.navbar-brand {
+    margin-left: 50px;
+}
+
+.navbar {
+    -webkit-box-shadow: 0px 4px 5px 0px rgba(77, 77, 77, 1);
+    -moz-box-shadow: 0px 4px 5px 0px rgba(77, 77, 77, 1);
+    box-shadow: 0px 4px 5px 0px rgba(77, 77, 77, 1);
+}
+
+.navbar-nav .nav-link {
+    margin-right: 50px;
+    margin-left: 50px;
+}
+.door {
+    padding-left: 5px;
+}
+
+@media (max-width: 1245px) {
+    .navbar-brand {
+    margin-left: 0px;
+}
+
+.navbar-nav .nav-link {
+    margin-right: 5px;
+    margin-left: 5px;
+}
+}

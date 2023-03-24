@@ -1,0 +1,169 @@
+[{
+  "id": "1",
+  "code": "DJ",
+  "name": "Dolj"
+}, {
+  "id": "2",
+  "code": "BC",
+  "name": "Bac\u0103u"
+}, {
+  "id": "3",
+  "code": "HR",
+  "name": "Harghita"
+}, {
+  "id": "4",
+  "code": "BN",
+  "name": "Bistri\u021ba-N\u0103s\u0103ud"
+}, {
+  "id": "5",
+  "code": "DB",
+  "name": "D\u00e2mbovi\u021ba"
+}, {
+  "id": "6",
+  "code": "SV",
+  "name": "Suceava"
+}, {
+  "id": "7",
+  "code": "BT",
+  "name": "Boto\u0219ani"
+}, {
+  "id": "8",
+  "code": "BV",
+  "name": "Bra\u0219ov"
+}, {
+  "id": "9",
+  "code": "B",
+  "name": "Bucure\u0219ti"
+}, {
+  "id": "10",
+  "code": "BR",
+  "name": "Br\u0103ila"
+}, {
+  "id": "11",
+  "code": "HD",
+  "name": "Hunedoara"
+}, {
+  "id": "12",
+  "code": "TR",
+  "name": "Teleorman"
+}, {
+  "id": "13",
+  "code": "CV",
+  "name": "Covasna"
+}, {
+  "id": "14",
+  "code": "TL",
+  "name": "Tulcea"
+}, {
+  "id": "15",
+  "code": "TM",
+  "name": "Timi\u0219"
+}, {
+  "id": "16",
+  "code": "BZ",
+  "name": "Buz\u0103u"
+}, {
+  "id": "17",
+  "code": "PH",
+  "name": "Prahova"
+}, {
+  "id": "18",
+  "code": "IF",
+  "name": "Ilfov"
+}, {
+  "id": "19",
+  "code": "NT",
+  "name": "Neam\u021b"
+}, {
+  "id": "20",
+  "code": "CJ",
+  "name": "Cluj"
+}, {
+  "id": "21",
+  "code": "AB",
+  "name": "Alba"
+}, {
+  "id": "22",
+  "code": "GR",
+  "name": "Giurgiu"
+}, {
+  "id": "23",
+  "code": "AG",
+  "name": "Arge\u0219"
+}, {
+  "id": "24",
+  "code": "CL",
+  "name": "C\u0103l\u0103ra\u0219i"
+}, {
+  "id": "25",
+  "code": "BH",
+  "name": "Bihor"
+}, {
+  "id": "26",
+  "code": "IS",
+  "name": "Ia\u0219i"
+}, {
+  "id": "27",
+  "code": "VL",
+  "name": "V\u00e2lcea"
+}, {
+  "id": "28",
+  "code": "VN",
+  "name": "Vrancea"
+}, {
+  "id": "29",
+  "code": "AR",
+  "name": "Arad"
+}, {
+  "id": "30",
+  "code": "IL",
+  "name": "Ialomi\u021ba"
+}, {
+  "id": "31",
+  "code": "CS",
+  "name": "Cara\u0219-Severin"
+}, {
+  "id": "32",
+  "code": "GL",
+  "name": "Gala\u021bi"
+}, {
+  "id": "33",
+  "code": "GJ",
+  "name": "Gorj"
+}, {
+  "id": "34",
+  "code": "CT",
+  "name": "Constan\u021ba"
+}, {
+  "id": "35",
+  "code": "SM",
+  "name": "Satu Mare"
+}, {
+  "id": "36",
+  "code": "MM",
+  "name": "Maramure\u0219"
+}, {
+  "id": "37",
+  "code": "MH",
+  "name": "Mehedin\u021bi"
+}, {
+  "id": "38",
+  "code": "SJ",
+  "name": "S\u0103laj"
+}, {
+  "id": "39",
+  "code": "VS",
+  "name": "Vaslui"
+}, {
+  "id": "40",
+  "code": "MS",
+  "name": "Mure\u0219"
+}, {
+  "id": "41",
+  "code": "SB",
+  "name": "Sibiu"
+}, {
+  "id": "42",
+  "code": "OT",
+  "name": "Olt"
+}]

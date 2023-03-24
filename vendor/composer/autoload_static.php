@@ -4,7 +4,7 @@
 
 namespace Composer\Autoload;
 
-class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
+class ComposerStaticInit6f6d674868df40dec48aaa23e84116a0
 {
     public static $files = array (
         '0e6d7bf4a5811bfa5cf40c5ccd6fae6a' => __DIR__ . '/..' . '/symfony/polyfill-mbstring/bootstrap.php',
@@ -340,8 +340,8 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
         ),
         'Psr\\Http\\Message\\' => 
         array (
-            0 => __DIR__ . '/..' . '/psr/http-factory/src',
-            1 => __DIR__ . '/..' . '/psr/http-message/src',
+            0 => __DIR__ . '/..' . '/psr/http-message/src',
+            1 => __DIR__ . '/..' . '/psr/http-factory/src',
         ),
         'Psr\\Http\\Client\\' => 
         array (
@@ -509,12 +509,16 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
         'App\\Exceptions\\Handler' => __DIR__ . '/../..' . '/app/Exceptions/Handler.php',
         'App\\Http\\Controllers\\Controller' => __DIR__ . '/../..' . '/app/Http/Controllers/Controller.php',
         'App\\Http\\Controllers\\DoctorController' => __DIR__ . '/../..' . '/app/Http/Controllers/DoctorController.php',
+        'App\\Http\\Controllers\\LoginController' => __DIR__ . '/../..' . '/app/Http/Controllers/LoginController.php',
         'App\\Http\\Controllers\\PacientController' => __DIR__ . '/../..' . '/app/Http/Controllers/PacientController.php',
+        'App\\Http\\Controllers\\ProgramareController' => __DIR__ . '/../..' . '/app/Http/Controllers/ProgramareController.php',
         'App\\Http\\Kernel' => __DIR__ . '/../..' . '/app/Http/Kernel.php',
         'App\\Http\\Middleware\\Authenticate' => __DIR__ . '/../..' . '/app/Http/Middleware/Authenticate.php',
         'App\\Http\\Middleware\\EncryptCookies' => __DIR__ . '/../..' . '/app/Http/Middleware/EncryptCookies.php',
         'App\\Http\\Middleware\\PreventRequestsDuringMaintenance' => __DIR__ . '/../..' . '/app/Http/Middleware/PreventRequestsDuringMaintenance.php',
         'App\\Http\\Middleware\\RedirectIfAuthenticated' => __DIR__ . '/../..' . '/app/Http/Middleware/RedirectIfAuthenticated.php',
+        'App\\Http\\Middleware\\SignInDoctorCheck' => __DIR__ . '/../..' . '/app/Http/Middleware/SignInDoctorCheck.php',
+        'App\\Http\\Middleware\\SignInPacientCheck' => __DIR__ . '/../..' . '/app/Http/Middleware/SignInPacientCheck.php',
         'App\\Http\\Middleware\\TrimStrings' => __DIR__ . '/../..' . '/app/Http/Middleware/TrimStrings.php',
         'App\\Http\\Middleware\\TrustHosts' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustHosts.php',
         'App\\Http\\Middleware\\TrustProxies' => __DIR__ . '/../..' . '/app/Http/Middleware/TrustProxies.php',
@@ -522,6 +526,7 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
         'App\\Http\\Middleware\\VerifyCsrfToken' => __DIR__ . '/../..' . '/app/Http/Middleware/VerifyCsrfToken.php',
         'App\\Http\\Requests\\DoctorRequest' => __DIR__ . '/../..' . '/app/Http/Requests/DoctorRequest.php',
         'App\\Http\\Requests\\IstoricPacientRequest' => __DIR__ . '/../..' . '/app/Http/Requests/IstoricPacientRequest.php',
+        'App\\Http\\Requests\\LoginRequest' => __DIR__ . '/../..' . '/app/Http/Requests/LoginRequest.php',
         'App\\Http\\Requests\\PacientRequest' => __DIR__ . '/../..' . '/app/Http/Requests/PacientRequest.php',
         'App\\Models\\Diploma' => __DIR__ . '/../..' . '/app/Models/Diploma.php',
         'App\\Models\\Doctor' => __DIR__ . '/../..' . '/app/Models/Doctor.php',
@@ -535,6 +540,7 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
         'App\\Providers\\BroadcastServiceProvider' => __DIR__ . '/../..' . '/app/Providers/BroadcastServiceProvider.php',
         'App\\Providers\\EventServiceProvider' => __DIR__ . '/../..' . '/app/Providers/EventServiceProvider.php',
         'App\\Providers\\RouteServiceProvider' => __DIR__ . '/../..' . '/app/Providers/RouteServiceProvider.php',
+        'App\\View\\Components\\AlertNotification' => __DIR__ . '/../..' . '/app/View/Components/AlertNotification.php',
         'Attribute' => __DIR__ . '/..' . '/symfony/polyfill-php80/Resources/stubs/Attribute.php',
         'Brick\\Math\\BigDecimal' => __DIR__ . '/..' . '/brick/math/src/BigDecimal.php',
         'Brick\\Math\\BigInteger' => __DIR__ . '/..' . '/brick/math/src/BigInteger.php',
@@ -648,7 +654,10 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
         'Database\\Factories\\InvitationFactory' => __DIR__ . '/../..' . '/database/factories/InvitationFactory.php',
         'Database\\Factories\\UserFactory' => __DIR__ . '/../..' . '/database/factories/UserFactory.php',
         'Database\\Seeders\\DatabaseSeeder' => __DIR__ . '/../..' . '/database/seeders/DatabaseSeeder.php',
+        'Database\\Seeders\\DoctorSeeder' => __DIR__ . '/../..' . '/database/seeders/DoctorSeeder.php',
         'Database\\Seeders\\InvitationSeeder' => __DIR__ . '/../..' . '/database/seeders/InvitationSeeder.php',
+        'Database\\Seeders\\IstoricMedicalSeeder' => __DIR__ . '/../..' . '/database/seeders/IstoricMedicalSeeder.php',
+        'Database\\Seeders\\PacientSeeder' => __DIR__ . '/../..' . '/database/seeders/PacientSeeder.php',
         'DeepCopy\\DeepCopy' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/DeepCopy.php',
         'DeepCopy\\Exception\\CloneException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/CloneException.php',
         'DeepCopy\\Exception\\PropertyException' => __DIR__ . '/..' . '/myclabs/deep-copy/src/DeepCopy/Exception/PropertyException.php',
@@ -6260,10 +6269,10 @@ class ComposerStaticInitce88fcf3155a3c445177d7e822a875db
     public static function getInitializer(ClassLoader $loader)
     {
         return \Closure::bind(function () use ($loader) {
-            $loader->prefixLengthsPsr4 = ComposerStaticInitce88fcf3155a3c445177d7e822a875db::$prefixLengthsPsr4;
-            $loader->prefixDirsPsr4 = ComposerStaticInitce88fcf3155a3c445177d7e822a875db::$prefixDirsPsr4;
-            $loader->prefixesPsr0 = ComposerStaticInitce88fcf3155a3c445177d7e822a875db::$prefixesPsr0;
-            $loader->classMap = ComposerStaticInitce88fcf3155a3c445177d7e822a875db::$classMap;
+            $loader->prefixLengthsPsr4 = ComposerStaticInit6f6d674868df40dec48aaa23e84116a0::$prefixLengthsPsr4;
+            $loader->prefixDirsPsr4 = ComposerStaticInit6f6d674868df40dec48aaa23e84116a0::$prefixDirsPsr4;
+            $loader->prefixesPsr0 = ComposerStaticInit6f6d674868df40dec48aaa23e84116a0::$prefixesPsr0;
+            $loader->classMap = ComposerStaticInit6f6d674868df40dec48aaa23e84116a0::$classMap;
 
         }, null, ClassLoader::class);
     }

@@ -4,15 +4,17 @@ namespace App\Http\Controllers;
 
 use App\Http\Requests\IstoricPacientRequest;
 use App\Http\Requests\PacientRequest;
-use App\Models\Doctor;
+use App\Http\Requests\PacientUpdateRequest;
 use App\Models\Invitation;
 use App\Models\IstoricMedical;
 use App\Models\Pacient;
+use Illuminate\Http\File as HttpFile;
 use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Session;
+use Illuminate\Support\Facades\File;
 
 class PacientController extends Controller
 {
@@ -94,5 +96,33 @@ class PacientController extends Controller
     {
         $pacient = Session::get('pacient');
         return view('pacient.profile.edit', ['pacient' => $pacient]);
+    }
+
+    public function fileUpload($id)
+    {
+        if (request()->hasFile('poza_profil')) {
+            $file = request()->file('poza_profil');
+            $name = 'profil.jpg';
+            $path = public_path() . '/images/pacient/profil/' . $id . '/profil.jpg';
+            if (File::exists($path)) {
+                unlink($path);
+            }
+            $path = public_path() . '/images/pacient/profil/' . $id;
+            $file->move($path, $name);
+            $path = '/images/pacient/profil/' . $id . '/' . $name;
+            return $path;
+        }
+        return null;
+    }
+
+    public function update(PacientUpdateRequest $request)
+    {
+        $pacient = Session::get('pacient');
+        $pacient->nume = $request->nume;
+        $pacient->prenume = $request->prenume;
+        $pacient->adresa = $this->getAdress();
+        $pacient->poza_profil = $this->fileUpload($pacient->id);
+        $pacient->save();
+        return redirect()->route('pacient.pacient.edit');
     }
 }

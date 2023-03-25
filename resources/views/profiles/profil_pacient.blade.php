@@ -34,19 +34,20 @@
 
     {{-- NAVBAR --}}
     <section class="profile">
-        <div class="row">
-            <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
-                <div class="profile-pic">
-                    <label class="-label" for="file">
-                        <span class="glyphicon glyphicon-camera"></span>
-                        <span>Change Image</span>
-                    </label>
-                    <input id="file" type="file" onchange="loadFile(event)" />
-                    <img src="default-pp.png" id="output" width="200" />
+        <form class="edit-info" action="submit">
+            <div class="row">
+                <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
+                    <div class="profile-pic">
+                        <label class="-label" for="file">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span>Change Image</span>
+                        </label>
+                        <input id="file" type="file" onchange="loadFile(event)" />
+                        <img src="default-pp.png" id="output" width="200" />
+                    </div>
                 </div>
-            </div>
-            <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
-                <form class="edit-info" action="submit">
+                <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
+
                     <div class="row-form row">
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <h2>Informatii personale</h2>
@@ -108,8 +109,8 @@
                             </button>
                         </div>
                     </div>
-                </form>
-            </div>
+        </form>
+        </div>
         </div>
     </section>
 </body>

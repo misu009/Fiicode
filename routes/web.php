@@ -49,3 +49,9 @@ Route::get('/profil_doctor', function () {
 Route::get('/profil_pacient', function () {
     return view('profiles.profil_pacient');
 });
+Route::get('/program_doctor', function () {
+    return view('program/program_doctor');
+});
+Route::get('/program_pacient', function () {
+    return view('program/program_pacient');
+});

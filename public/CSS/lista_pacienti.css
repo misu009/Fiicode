@@ -1,0 +1,159 @@
+body
+{
+    font-family: 'Montserrat', sans-serif;
+}
+
+
+
+.date-input {
+    -webkit-box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.15);
+    box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 50%;
+    margin-bottom: 2rem;
+}
+
+.submit-login {
+    display: inline-block;
+    font-size: 1rem;
+    padding: 0.5rem;
+    width: 15rem;
+    border-radius: 20px;
+    -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+    box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+}
+
+.details-btn{
+    /* font-size: 13px; */
+        /* padding: 0.5rem; */
+        /* width: 12rem; */
+        margin-top: 0.3rem;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+        box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+}
+
+.select-input
+{
+text-align: center;
+}
+.selection
+{
+    margin-top: 10%;
+    margin-bottom: 5%;
+}
+
+.form-select {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+    box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 45%;
+    margin-bottom: 2rem;
+}
+
+.table
+{
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+}
+
+.details-col
+{
+ text-align: center;
+
+}
+
+.adress-col
+{
+    max-width: 350px;
+    min-width:100px;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+}
+
+@media (max-width: 760px) {
+
+    .submit-login
+    {
+        font-size: 0.8rem;
+        width: 30%;
+    }
+        .table {
+            width: 100%;
+        }
+
+}
+
+@media (max-width: 500px) {
+    .table
+    {
+        width: 100%;
+    }
+    body
+    {
+        font-size: 0.8rem;
+    }
+    .submit-login{
+        width: 50%;
+        font-size: 0.7rem;
+    }
+    .form-select
+    {
+        font-size: 0.8rem;
+        width: 80%;
+    }
+    .details-btn
+    {
+        font-size: 0.5rem;
+        margin-top: 0px;
+    }
+
+}
+
+.input-register {
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 80%;
+    margin-bottom: 2rem;
+    ;
+}
+.modal-title
+{
+    margin-left: auto;
+    margin-right: auto;
+    font-size: 2rem;
+}
+.close
+{
+    margin-left: 0.5rem;
+}
+.add
+{
+    margin-left: 5px;
+}
+
+
+

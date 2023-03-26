@@ -1,59 +1,49 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
+
+<head>
     <meta charset="UTF-8" />
     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Navbar</title>
     <!-- BOOTSTRAP -->
     <!-- FONTSAWESOME -->
-    <script
-        src="https://kit.fontawesome.com/b3f61e5fba.js"
-        crossorigin="anonymous"
-    ></script>
+    <script src="https://kit.fontawesome.com/b3f61e5fba.js" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/navbar_style.css" />
-    </head>
-    <body>
+</head>
+
+<body>
     <header>
-        <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
-        <div class="container-fluid">
-            <a class="navbar-brand" href="#">Nume si Logo</a>
-            <button
-            class="navbar-toggler"
-            type="button"
-            data-bs-toggle="collapse"
-            data-bs-target="#navbarSupportedContent"
-            aria-controls="navbarSupportedContent"
-            aria-expanded="false"
-            aria-label="Toggle navigation">
-            <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-
-
-                <ul class="navbar-nav ms-auto mb-2 mb-lg-0">
-                    @foreach ($navbarLinks as $link)
-                        <li class="nav-item">
-                            <a
-                                class="nav-link"
-                                aria-current="page"
-                                href="/"
-                                >{{ $link }}
-                                @if($link == 'Deconecteaza-te')
-                                <i class="fa-solid fa-door-open"></i
-                                    >
-                                @endif</a>
-                        </li>
-                    @endforeach
-                </ul>
-
-
-        </div>
-        </div>
+        <nav class="navbar navbar-expand-lg">
+            <div class="links container-fluid">
+                <a style="color:rgb(11, 146, 47);" class="navbar-brand">
+                    <img src="/images/logo.png" style="width:30px" alt="logo">
+                    MedWise
+                </a>
+                <button class="toggle navbar-toggler" type="button" data-bs-toggle="collapse"
+                    data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent"
+                    aria-expanded="false" aria-label="Toggle navigation">
+                    <i class="fa-solid fa-bars"></i>
+                </button>
+                <div class="justify-content-center collapse navbar-collapse" id="navbarSupportedContent">
+                    <ul class="nav-links navbar-nav">
+                        @foreach ($navbarLinks as $link)
+                            <li class="nav-item">
+                                <a class="nav-link" aria-current="page" href="/">{{ $link }}
+                                    @if ($link == 'Deconecteaza-te')
+                                        <i class="fa-solid fa-door-open"></i>
+                                    @endif
+                                </a>
+                            </li>
+                        @endforeach
+                    </ul>
+                </div>
+            </div>
         </nav>
     </header>
-    </body>
+</body>
+
 </html>

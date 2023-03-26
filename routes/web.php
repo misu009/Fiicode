@@ -55,3 +55,6 @@ Route::get('/program_doctor', function () {
 Route::get('/program_pacient', function () {
     return view('program/program_pacient');
 });
+Route::get('/lista_pacienti', function () {
+    return view('doctor/programari/lista_pacienti');
+});

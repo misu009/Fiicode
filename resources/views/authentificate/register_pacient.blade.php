@@ -26,9 +26,9 @@
 </head>
 
 <body>
-    <x-navbar  :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
     <x-alert></x-alert>
-    <section class="inregistrare">
+    <section style="margin-top: 2%;" class="inregistrare">
         <div class="card-group ">
             <div class="row">
                 <div class="col col-lg-12 col-md-12 col-sm-12 col-12">

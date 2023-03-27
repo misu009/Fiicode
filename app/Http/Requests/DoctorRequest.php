@@ -35,7 +35,8 @@ class DoctorRequest extends FormRequest
             'strada' => 'required',
             'bloc' => 'required',
             'apartament' => 'required',
-            'atestat' => 'required',
+            'atestat' => 'required|array',
+            'atestat.*' => 'image',
         ];
     }
 

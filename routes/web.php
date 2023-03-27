@@ -32,14 +32,20 @@ Route::group(['middleware' => ['pacient'], 'prefix' => 'pacient'], function () {
     Route::get('/', [PacientController::class, 'edit'])->name('pacient.pacient.edit');
     Route::post('/update', [PacientController::class, 'update'])->name('pacient.pacient.update');
 
-    Route::get('/program', [ProgramareController::class, 'pacientIndex'])->name('pacient.programare.index');
+    Route::get('/program', [ProgramareController::class, 'index'])->name('pacient.programare.index');
+    Route::get('/program/data', [ProgramareController::class, 'getIndexDate'])->name('pacient.programare.data');
+    Route::post('/program/add', [ProgramareController::class, 'addProgramarePacient'])->name('pacient.programare.add');
 });
 
 Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
     Route::get('/', [DoctorController::class, 'edit'])->name('doctor.doctor.edit');
     Route::post('/update', [DoctorController::class, 'update'])->name('doctor.doctor.update');
 
-    Route::get('/program', [ProgramareController::class, 'doctorIndex'])->name('doctor.programare.index');
+    Route::get('/program', [ProgramareController::class, 'index'])->name('doctor.programare.index');
+    Route::get('/program/data', [ProgramareController::class, 'getIndexDate'])->name('doctor.programare.data');
+    Route::post('/program/add', [ProgramareController::class, 'addProgramareDoctor'])->name('doctor.programare.add');
+    Route::put('/program/update', [ProgramareController::class, 'update'])->name('doctor.programare.update');
+    Route::delete('program/delete/{programare}', [ProgramareController::class, 'delete'])->name('doctor.programare.delete');
 });
 
 Route::get('/profil_doctor', function () {

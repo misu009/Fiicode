@@ -128,11 +128,11 @@ class ProgramareController extends Controller
 
         $pacient = Session::get('pacient');
         $data = Carbon::parse($request->data . $request->ora);
-        dd($data);
-        if ($programare = Programare::where('doctor_id', $pacient->doctor_id)
+        if (Programare::where('doctor_id', $pacient->doctor_id)
             ->where('data', '>=', $data->subMinutes(10))
             ->where('data', '<=', $data->addMinutes(20))
-            ->where('pacient_id', '!=', $pacient->id)
+            // ->where('pacient_id', '!=', $pacient->id)
+            ->first()
         ) {
             dd($programare);
             return Redirect::back()->withErrors(['action' => 'Doctorul dvs nu are loc liber la acel moment']);

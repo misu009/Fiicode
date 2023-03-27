@@ -1,34 +1,28 @@
-body
-{
-    font-family: 'Montserrat', sans-serif;
+body {
+    font-family: "Montserrat", sans-serif;
 }
 
-h1
-{
-    font-size: 2rem;;
+h1 {
+    font-size: 2rem;
 }
 
-.choose-date
-{
+.choose-date {
     margin-top: 8%;
     text-align: center;
 }
 
-
-
-.date-input
-{
+.date-input {
     -webkit-box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.15);
-        box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.15);
-margin-top: 0.5rem;
-            margin-bottom: 0.5rem;
-            border: solid;
-            border-color: rgb(201, 201, 201);
-            border-width: 1px;
-            border-radius: 10px;
-            padding: 0.4rem;
-            width: 50%;
-            margin-bottom: 2rem;
+    box-shadow: 5px 5px 21px 5px rgba(0, 0, 0, 0.15);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 50%;
+    margin-bottom: 2rem;
 }
 .submit-login {
     margin-left: 0.5rem;
@@ -37,7 +31,7 @@ margin-top: 0.5rem;
     width: 10rem;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-        box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+    box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
 }
 
 .submit-login1 {
@@ -46,45 +40,37 @@ margin-top: 0.5rem;
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
     box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-
 }
 
-label
-{
+label {
     font-size: 23px;
 }
 
-.table
-{
+.table {
     margin-left: auto;
     margin-right: auto;
-    margin-top:5%;
-    width:90% ;
-
+    margin-top: 5%;
+    width: 90%;
 }
 
-.edit-btn
-{
+.edit-btn {
     margin-right: 1rem;
 }
 
 @media (max-width: 991px) {
     .submit-login {
-            /* margin-left: -5rem; */
-            margin-top: 1rem;
-            padding: 0.5rem;
-            width: 10rem;
-            border-radius: 20px;
-            -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-            box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-        }
-        .date-input
-        {
-            width: 70%;
-        }
-
+        /* margin-left: -5rem; */
+        margin-top: 1rem;
+        padding: 0.5rem;
+        width: 10rem;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+        box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+    }
+    .date-input {
+        width: 70%;
+    }
 }
-
 
 @media (max-width: 755px) {
     .edit-btn {
@@ -92,32 +78,30 @@ label
         font-size: 10px;
         margin-bottom: 0.2rem;
         margin-left: -0;
-        }
-        .delete-btn
-        {
-            display: inline-block;
-            font-size: 10px;
-        }
-                .submit-login {
-                    margin-top: 1rem;;
-                    /* margin-left: 3rem; */
-                    /* margin: 1rem; */
-                    padding: 0.5rem;
-                    width: 10rem;
-                    border-radius: 20px;
-                    -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-                    box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
-                }
+    }
+    .delete-btn {
+        display: inline-block;
+        font-size: 10px;
+    }
+    .submit-login {
+        margin-top: 1rem;
+        /* margin-left: 3rem; */
+        /* margin: 1rem; */
+        padding: 0.5rem;
+        width: 10rem;
+        border-radius: 20px;
+        -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+        box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+    }
 }
 
-.btn-modal
-{
+.btn-modal {
     text-align: center;
     margin-top: 5%;
 }
 
-.time-data
-{-webkit-box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+.time-data {
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
     box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
     margin-top: 0.5rem;
     margin-bottom: 0.5rem;
@@ -130,56 +114,64 @@ label
     margin-bottom: 2rem;
 }
 
-.form-select
-{
+.form-select {
     margin-left: auto;
     margin-right: auto;
     text-align: center;
     -webkit-box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
-        box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
-        margin-top: 0.5rem;
-        margin-bottom: 0.5rem;
-        border: solid;
-        border-color: rgb(201, 201, 201);
-        border-width: 1px;
-        border-radius: 10px;
-        padding: 0.4rem;
-        width: 50%;
-        margin-bottom: 2rem;
+    box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 50%;
+    margin-bottom: 2rem;
 }
-.modal-title
-{
+.modal-title {
     margin-left: auto;
     margin-right: auto;
     font-size: 1rem;
 }
 
-.modal-header
-{
+.modal-header {
     text-align: center;
 }
 
-
-.date-buttons
-{
+.date-buttons {
     text-align: center;
 }
 
-.edit-modal-body
-{
+.edit-modal-body {
     text-align: center;
 }
-.detalii-col
-{
+.detalii-col {
     overflow: auto;
     max-width: 200px;
 }
-.edit-col
-{
+.edit-col {
     max-width: 30px;
 }
 
-::-webkit-scrollbar
-{
+::-webkit-scrollbar {
     width: 5px;
+}
+
+.form-textarea {
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
+    -webkit-box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+    box-shadow: 0px 0px 15px -4px rgba(38, 38, 38, 0.55);
+    margin-top: 0.5rem;
+    margin-bottom: 0.5rem;
+    border: solid;
+    border-color: rgb(201, 201, 201);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 50%;
+    margin-bottom: 2rem;
 }

@@ -8,8 +8,6 @@ use App\Http\Requests\PacientUpdateRequest;
 use App\Models\Invitation;
 use App\Models\IstoricMedical;
 use App\Models\Pacient;
-use Illuminate\Http\File as HttpFile;
-use Illuminate\Http\Request;
 use Illuminate\Support\Carbon;
 use Illuminate\Support\Facades\Hash;
 use Illuminate\Support\Facades\Redirect;

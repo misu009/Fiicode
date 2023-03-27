@@ -15,8 +15,8 @@ class CreateProgramariTable extends Migration
             $table->id();
             $table->unsignedBigInteger('doctor_id')->constrained('doctors');
             $table->unsignedBigInteger('pacient_id')->constrained('pacients');
-            $table->date('data');
-            $table->enum('importanta', ['hard', 'medium', 'low']);
+            $table->dateTime('data');
+            $table->enum('importanta', ['warning', 'success', 'danger']);
             $table->longText('description');
             $table->timestamps();
         });

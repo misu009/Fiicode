@@ -95,7 +95,25 @@ input[type="text"]:focus {
     outline: none;
 }
 
-.links
-{
-
+@media (max-width: 1300px) {
+    .login-card {
+        max-width: 50%;
+        width: 50%;
+    }
 }
+
+@media (max-width: 1190px) {
+    .login-card
+    {
+        max-width: 60%;
+        width: 50%;
+    }
+}
+
+@media (max-width: 870px) {
+    .login-card {
+        max-width: 90%;
+        width: 80%;
+    }
+}
+

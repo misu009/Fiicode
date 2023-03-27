@@ -23,7 +23,8 @@ class DoctorUpdateRequest extends FormRequest
             'strada' => 'required',
             'bloc' => 'numeric|required',
             'apartament' => 'numeric|required',
-            'atestat' => 'nullable',
+            'atestat' => 'nullable|array',
+            'atestat.*' => 'image',
         ];
     }
 

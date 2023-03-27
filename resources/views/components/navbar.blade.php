@@ -20,7 +20,7 @@
         <nav class="navbar navbar-expand-lg">
             <div class="links container-fluid">
                 <a style="color:rgb(11, 146, 47);" class="navbar-brand">
-                    <img src="/images/logo.png" style="width:30px" alt="logo">
+                    <img src="/images/logo.jpg" style="width:35px" alt="logo">
                     MedWise
                 </a>
                 <button class="toggle navbar-toggler" type="button" data-bs-toggle="collapse"

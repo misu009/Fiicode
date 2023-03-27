@@ -78,14 +78,21 @@ class ProgramareController extends Controller
     {
         $pacient = Session::get('pacient');
         $data = Carbon::parse($request->data . $request->ora);
-        $subData = Carbon::parse($data->subMinutes(10));
-        $addData = Carbon::parse($data->addMinutes(20));
-        if ($programare = Programare::where('doctor_id', $pacient->doctor_id)
-            ->where('data', '<=', $addData)
-            ->where('data', '>=', $subData)
+
+        if (Programare::where('doctor_id', $pacient->doctor_id)
+            ->where('data', '>=', $data->subMinutes(10))
+            ->where('data', '<=', $data->addMinutes(20))
             ->first()
         ) {
             return Redirect::back()->withErrors(['action' => 'Doctorul dvs nu are loc liber la acel moment']);
+        }
+
+        $data->subMinutes(10);
+        if ($programare = Programare::whereDate('data', $data)
+            ->where('pacient_id', $pacient->id)
+            ->count() >= 2
+        ) {
+            return Redirect::back()->withErrors(['action' => 'Nu va puteti face mai mult de 2 programari intr-o zi']);
         }
 
         $programare = new Programare();
@@ -98,7 +105,7 @@ class ProgramareController extends Controller
         return Redirect::back()->with('succes', 'Programare adaugata cu succes');
     }
 
-    public function update(ProgramareRequest $request)
+    public function updateDoctor(ProgramareRequest $request)
     {
         $programare = Programare::where('id', $request->id)->first();
         if (!$programare)
@@ -111,6 +118,26 @@ class ProgramareController extends Controller
         $programare->description = $request->description;
         $programare->save();
         return Redirect::back()->with('succes', 'Programare adaugata cu succes');
+    }
+
+    public function updatePacient(ProgramareRequest $request)
+    {
+        $programare = Programare::where('id', $request->id)->first();
+        if (!$programare)
+            return Redirect::back()->withErrors('error', 'Programarea nu a fost identificata');
+
+        $pacient = Session::get('pacient');
+        $data = Carbon::parse($request->data . $request->ora);
+        dd($data);
+        if ($programare = Programare::where('doctor_id', $pacient->doctor_id)
+            ->where('data', '>=', $data->subMinutes(10))
+            ->where('data', '<=', $data->addMinutes(20))
+            ->where('pacient_id', '!=', $pacient->id)
+        ) {
+            dd($programare);
+            return Redirect::back()->withErrors(['action' => 'Doctorul dvs nu are loc liber la acel moment']);
+        }
+        dd(2);
     }
 
     public function delete(Programare $programare)

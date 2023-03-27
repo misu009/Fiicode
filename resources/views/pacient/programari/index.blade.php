@@ -36,7 +36,7 @@
                     <h1>Introduceti data</h1>
                 </div>
                 <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input class="date-input" type="date"
-                        id="data" name="data" value="{{ isset($data) ? $data : null }}">
+                        name="data" value="{{ isset($data) ? $data : null }}">
                 </div>
                 <div class="date-buttons">
                     <button name="action" value="find" type="submit" class="submit-login btn btn-success">Arata
@@ -68,11 +68,17 @@
                                 <th scope="row">{{ $date }}</th>
                                 <td>{{ $time }}</td>
                                 <td class="edit-col"><button type="button" class="edit-btn btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#editModal">
+                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                        onclick="editProgramare({{ $programare->id }}, '{{ $date }}', '{{ $time }}')">
                                         <i class="fa-solid fa-pencil"></i>
                                     </button>
-                                    <button class="delete-btn btn btn-danger"><i
-                                            class=" fa-solid fa-trash"></i></button>
+                                    <form method="POST" class="btn-danger"
+                                        action="{{ route('pacient.programare.delete', $programare->id) }}">
+                                        @csrf
+                                        @method('DELETE')
+                                        <button type="submit" class="delete-btn btn btn-danger"><i
+                                                class=" fa-solid fa-trash"></i></button>
+                                    </form>
                                 </td>
                             </tr>
                         @endforeach
@@ -91,10 +97,21 @@
             data-bs-target="#exampleModal">
             Faceti o programare
         </button>
-        @include('pacient.programari.add')
         @include('pacient.programari.edit')
+        @include('pacient.programari.add')
     </div>
     </div>
 </body>
 
 </html>
+
+<script>
+    function editProgramare(id, data, ora) {
+        const input1 = document.getElementById('id');
+        input1.value = id;
+        const input2 = document.getElementById('data');
+        input2.value = data;
+        const input3 = document.getElementById('ora');
+        input3.value = ora;
+    }
+</script>

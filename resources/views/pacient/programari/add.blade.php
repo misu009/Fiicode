@@ -7,6 +7,7 @@
             <div class="modal-body">
                 <form class="modal-form" method="post" action="{{ route('pacient.programare.add') }}">
                     @csrf
+                    <input type="hidden" name="action" value="addProgramare">
                     <input name="data" class="time-data" type="date" value="{{ isset($data) ? $data : null }}">
                     <input name="ora" class="time-data" type="time">
                     <textarea name="description" placeholder="Descrieti necesitatea sau problema pe care o aveti" class="date-input"

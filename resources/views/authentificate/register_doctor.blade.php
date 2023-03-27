@@ -117,6 +117,7 @@
             </div>
         </div>
     </section>
+    <x-footer></x-footer>
 
 </body>
 

@@ -37,7 +37,7 @@
                     <h1>Introduceti data</h1>
                 </div>
                 <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input class="date-input"
-                        type="date"name="data" value="{{ isset($data) ? $data : null }}" required>
+                        type="date" name="data" value="{{ isset($data) ? $data : null }}" required>
                 </div>
                 <div class="date-buttons">
                     <button type="submit" name="action" value="find" class="submit-login btn btn-success">Arata
@@ -94,7 +94,6 @@
                                         <button type="submit" class="delete-btn btn btn-danger"><i
                                                 class=" fa-solid fa-trash"></i></button>
                                     </form>
-
                                 </td>
 
                             </tr>

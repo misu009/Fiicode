@@ -2,10 +2,12 @@
 
 use App\Http\Controllers\DoctorController;
 use App\Http\Controllers\EmailController;
+use App\Http\Controllers\IstoricMedicalController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PacientController;
 use App\Http\Controllers\PacientListController;
 use App\Http\Controllers\ProgramareController;
+use App\Models\IstoricMedical;
 use Illuminate\Support\Facades\Route;
 
 /*
@@ -39,6 +41,9 @@ Route::group(['middleware' => ['pacient'], 'prefix' => 'pacient'], function () {
     Route::post('/program/add', [ProgramareController::class, 'addProgramarePacient'])->name('pacient.programare.add');
     Route::put('program/update', [ProgramareController::class, 'updatePacient'])->name('pacient.programare.update');
     Route::delete('program/delete/{programare}', [ProgramareController::class, 'delete'])->name('pacient.programare.delete');
+
+    Route::get('/istoric_medical', [IstoricMedicalController::class, 'index'])->name('pacient.istoric_medical.index');
+    Route::post('/istoric_medical/update', [IstoricMedicalController::class, 'update'])->name('pacient.istoric_medical.update');
 });
 
 Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
@@ -55,6 +60,8 @@ Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
     Route::post('/pacient', [PacientListController::class, 'getPacient'])->name('doctor.pacienti.get');
     Route::get('/pacient/{id}', [PacientListController::class, 'indexPacient'])->name('doctor.pacient.index');
     Route::post('/pacient/add', [PacientListController::class, 'add'])->name('doctor.pacient.add');
+    Route::post('/pacient/update/istoric_medical', [PacientListController::class, 'updateIstoric'])->name('doctor.pacient.istoric');
+    Route::post('/redirect/pacient', [PacientListController::class, 'redirect'])->name('doctor.pacient.redirect');
 });
 
 Route::get('/profil_doctor', function () {
@@ -73,6 +80,10 @@ Route::get('/program_pacient', function () {
 
 Route::get('/tutorial', function () {
     return view('footer_links/tutorial');
+});
+
+Route::get('/des_noi', function () {
+    return view('footer_links/des_noi');
 });
 
 Route::get('/profil_pacient_istoric', function () {

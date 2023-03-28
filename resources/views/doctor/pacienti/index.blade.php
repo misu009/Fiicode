@@ -76,10 +76,11 @@
                             <td scope="col">{{ $pacient->prenume }}</td>
                             <td scope="col">{{ $pacient->data_nasterii }}</td>
                             <td class="details-col" scope="col">
-                                <button class="details-btn btn btn-primary"><i
-                                        class="fa-solid fa-circle-info"></i></button>
+                                <a href="/doctor/pacient/{{ $pacient->id }}"><button
+                                        class="details-btn btn btn-primary"><i
+                                            class="fa-solid fa-circle-info"></i></button></a>
                                 <button data-bs-toggle="modal" data-bs-target="#transfer-pacient-Modal"
-                                    class="transfer-btn btn btn-warning"><i
+                                    class="transfer-btn btn btn-warning" onclick="editPacient({{ $pacient->id }})"><i
                                         class="fa-solid fa-diamond-turn-right"></i></button>
                             </td>
                         </tr>
@@ -114,24 +115,25 @@
                     <h1 class="modal-title">Transfera Pacientul</h1>
                 </div>
                 <div class="edit-modal-body modal-body">
-                    <form action="">
-                        <section class="selection">
-                            <div class="select-input">
-                                <form action="" method="post">
-                                    @csrf
-                                    <select class="select2" name="pacient">
-                                        <option>Adauga pacient</option>
-                                        <option value="WY">Wyomind</option>
-                                        <option value="Al">Alabama</option>
-                                        {{-- @foreach ($pacienti as $pacient)
-                        <option value="{{ $pacient->email }}">{{ $pacient->nume . ' ' . $pacient->prenume }}</option>
-                    @endforeach --}}
-                                    </select>
-                            </div>
-                            <div style="margin-top:10px; text-align: center "><button
-                                    class="submit-login btn btn-success">Transfera</button></div>
-
-                    </form>
+                    <section class="selection">
+                        <div class="select-input">
+                            @php
+                                $doctors = App\Models\Doctor::get();
+                            @endphp
+                            <form action="{{ route('doctor.pacient.redirect') }}" method="post">
+                                @csrf
+                                <input id="id" name="id" type="hidden" value="{{ old('id') }}">
+                                <select class="select2" name="doctor">
+                                    <option>Adauga pacient</option>
+                                    @foreach ($doctors as $doctor)
+                                        <option value="{{ $doctor->email }}">
+                                            {{ $doctor->nume . ' ' . $doctor->prenume }}</option>
+                                    @endforeach
+                                </select>
+                                <div style="margin-top:10px; text-align: center "><button
+                                        class="submit-login btn btn-success">Transfera</button></div>
+                            </form>
+                        </div>
                 </div>
 
             </div>
@@ -150,4 +152,9 @@
         });
         $('.select2_1').select2();
     });
+
+    function editPacient(id) {
+        const input = document.getElementById('id');
+        input.value = id;
+    }
 </script>

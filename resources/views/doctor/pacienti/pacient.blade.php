@@ -1,5 +1,3 @@
-@dd($pacient)
-
 <!DOCTYPE html>
 <html lang="en">
 
@@ -41,17 +39,16 @@
         <div id="carouselExampleIndicators" class="carousel slide">
             <h1>Fisa medicala</h1>
             <div class="carousel-inner">
-                <div class="carousel-item active">
-                    <img class="img-carousel" src="/images/wall1.jpg" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="img-carousel" src="/images/wall4.jpg" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="img-carousel" src="/images/wall3.jpg" class="d-block" alt="...">
-                </div>
-                <div class="carousel-item">
-                    <img class="img-carousel" src="/images/wall3.jpg" class="d-block" alt="...">
+                <div class="carousel-inner">
+                    <div class="carousel-item active">
+                        <img class="img-carousel"
+                            src="/images/pacient/fisa_medicala/1/fisa-de-consultatii-medicale-adulti.jpg"
+                            class="d-block" alt="...">
+                    </div>
+                    <div class="carousel-item">
+                        <img class="img-carousel" src="/images/pacient/fisa_medicala/1/t5z5he1j_f.jpg" class="d-block"
+                            alt="...">
+                    </div>
                 </div>
             </div>
             <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleIndicators"
@@ -68,19 +65,22 @@
 
     <section style="text-align: center" class="input-istoric">
         <h1>Editeaza istoricul medical</h1>
-        <form action="submit">
-            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intolerante" id="alergii_si_intolerante"
-                class="input-register" type="text"></textarea>
+        <form action="{{ route('doctor.pacient.istoric') }}" method="post">
+            @csrf
+            <input type="hidden" id="id" name="id" value="{{ old('id') ?: $istoric_medical->id }}">
+            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intoleranta" id="alergii_si_intoleranta"
+                class="input-register" type="text">{{ $istoric_medical->alergii_si_intoleranta }}</textarea>
             <textarea rows="2"placeholder="Boli cronice si diagnostice" name="boli_cronice_si_diagnostice"
-                id="boli_cronice_si_diagnostice" class="input-register" type="text"></textarea>
-            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intolerante" id="alergii_si_intolerante"
-                class="input-register" type="text"></textarea>
-            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intolerante" id="alergii_si_intolerante"
-                class="input-register" type="text"></textarea>
-            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intolerante" id="alergii_si_intolerante"
-                class="input-register" type="text"></textarea>
-            <textarea rows="2"placeholder="Alergii si Intolerante" name="alergii_si_intolerante" id="alergii_si_intolerante"
-                class="input-register" type="text"></textarea>
+                id="boli_cronice_si_diagnostice" class="input-register" type="text">{{ $istoric_medical->boli_cronice_si_diagnostice }}</textarea>
+            <textarea rows="2"placeholder="Istoricul de boli si intoleranta" name="istoricul_de_boli_si_diagnostice"
+                id="istoricul_de_boli_si_diagnostice" class="input-register" type="text">{{ $istoric_medical->istoricul_de_boli_si_diagnostice }}</textarea>
+            <textarea rows="2"placeholder="Interventii si procedee efectuate" name="interventii_si_procedee_efectuate"
+                id="interventii_si_procedee_efectuate" class="input-register" type="text">{{ $istoric_medical->interventii_si_procedee_efectuate }}</textarea>
+            <textarea rows="2"placeholder="Servicii medicale" name="servicii_medicale" id="servicii_medicale"
+                class="input-register" type="text">{{ $istoric_medical->servicii_medicale }}</textarea>
+            <textarea rows="2"placeholder="imunizari" name="imunizari" id="imunizari" class="input-register" type="text">{{ $istoric_medical->imunizari }}</textarea>
+            <textarea rows="2"placeholder="Tratament medicamentos" name="tratament_medicamentos" id="tratament_medicamentos"
+                class="input-register" type="text">{{ $istoric_medical->tratament_medicamentos }}</textarea>
             <div class="row">
                 <div class="col-12"><button class="btn btn-success submit-login">Editeaza</button></div>
             </div>
@@ -89,20 +89,6 @@
 
 
     </section>
-
-    <div class="modal fade" id="Modal-Istoric" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
-        <div class="modal-lg modal-dialog modal-dialog-centered">
-            <div class="modal-content">
-                <div class="modal-header">
-                    <h1 class="modal-title">Isotric Medical</h1>
-                </div>
-                <div class="modal-body">
-                    <form class="modal-form" action="submit">
-                    </form>
-                </div>
-            </div>
-        </div>
-    </div>
     <x-footer></x-footer>
 </body>
 

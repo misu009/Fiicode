@@ -27,7 +27,7 @@
                 <div class="col-md-3">
                     <h5 class="text-center">Navigatie</h5>
                     <ul class="list-unstyled text-center">
-                        {{-- <li><a href="{{ route('des_noi') }}">Despre noi</a></li> --}}
+                        <li><a href="/des_noi">Despre noi</a></li>
                         <li><a
                                 href="https://mail.google.com/mail/?view=cm&to=medicalcompany133@gmail.com">Contacteaza-ne</a>
                         </li>
@@ -36,7 +36,7 @@
                 <div class="col-md-3">
                     <h5 class="text-center">Documentatie</h5>
                     <ul class="list-unstyled text-center">
-                        {{-- <li><a href="{{ route('tutorial') }}">Tutorial</a></li> --}}
+                        <li><a href="/tutorial">Tutorial</a></li>
                     </ul>
                 </div>
                 <div class="col-md-3 text-md-end">

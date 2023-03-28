@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PacientController;
+use App\Http\Controllers\PacientListController;
 use App\Http\Controllers\ProgramareController;
 use Illuminate\Support\Facades\Route;
 
@@ -48,6 +50,11 @@ Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
     Route::post('/program/add', [ProgramareController::class, 'addProgramareDoctor'])->name('doctor.programare.add');
     Route::put('/program/update', [ProgramareController::class, 'updateDoctor'])->name('doctor.programare.update');
     Route::delete('program/delete/{programare}', [ProgramareController::class, 'delete'])->name('doctor.programare.delete');
+
+    Route::get('/pacienti', [PacientListController::class, 'index'])->name('doctor.pacienti.index');
+    Route::post('/pacient', [PacientListController::class, 'getPacient'])->name('doctor.pacienti.get');
+    Route::get('/pacient/{id}', [PacientListController::class, 'indexPacient'])->name('doctor.pacient.index');
+    Route::post('/pacient/add', [PacientListController::class, 'add'])->name('doctor.pacient.add');
 });
 
 Route::get('/profil_doctor', function () {
@@ -70,7 +77,7 @@ Route::get('/tutorial', function () {
 
 Route::get('/des_noi', function () {
     return view('footer_links/des_noi');
-})->name('');
+});
 
 Route::get('/lista_pacienti', function () {
     return view('doctor/programari/lista_pacienti');

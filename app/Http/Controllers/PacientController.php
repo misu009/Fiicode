@@ -109,6 +109,8 @@ class PacientController extends Controller
             $file->move($path, $name);
             $path = '/images/pacient/profil/' . $id . '/' . $name;
             return $path;
+        } else if ($path = Pacient::where('id', $id)->first()->poza_profil) {
+            return $path;
         }
         return null;
     }

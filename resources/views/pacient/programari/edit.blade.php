@@ -1,4 +1,4 @@
-<div class="modal fade" id="editModal" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+<div class="modal fade" id="editProgramare" tabindex="-1" aria-labelledby="editProgramareLabel" aria-hidden="true">
     <div class="modal-lg modal-dialog modal-dialog-centered">
         <div class="modal-content">
             <div class="modal-header">
@@ -10,8 +10,8 @@
                     @method('PUT')
                     <input type="hidden" name="action" value="editProgramare">
                     <input type="hidden" name="id" id="id" value="{{ old('id') }}">
-                    <input id="data" name="data" class="time-data" type="date">
-                    <input id="ora" name="ora" class="time-data" type="time">
+                    <input id="data" name="data" class="time-data" type="date" value="{{ old('data') }}">
+                    <input id="ora" name="ora" class="time-data" type="time" value="{{ old('ora') }}">
                     <div style="text-align: center"><button value="submit"
                             class="btn btn-success submit-login">Modifica</button>
                         <button type="button" class=" submit-login btn btn-outline-danger"

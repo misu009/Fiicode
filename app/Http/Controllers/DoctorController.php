@@ -61,6 +61,8 @@ class DoctorController extends Controller
             $file->move($path, $name);
             $path = '/images/doctor/profil/' . $id . '/' . $name;
             return $path;
+        } else if ($path = Doctor::where('id', $id)->first()->poza_profil) {
+            return $path;
         }
         return null;
     }

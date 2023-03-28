@@ -28,7 +28,7 @@
 <body>
     <x-navbar :navbar-links="['/' => 'Acasa', '/tutorial' => 'Tutorial', 'des_noi' => 'Despre noi']"></x-navbar>
     <x-alert></x-alert>
-    <section style="margin-top: 2%;" class="inregistrare">
+    <section style="margin-top: 2%;padding-bottom:5%" class="inregistrare">
         <div class="card-group ">
             <div class="row">
                 <div class="col col-lg-12 col-md-12 col-sm-12 col-12">

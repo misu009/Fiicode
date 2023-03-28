@@ -28,7 +28,7 @@
 <body>
     <x-navbar :navbar-links="['/' => 'Acasa', '/tutorial' => 'Tutorial', 'des_noi' => 'Despre noi']"></x-navbar>
     <x-alert></x-alert>
-    <div style="margin-top: 2%;" class="login-card">
+    <div style="margin-top: 5%;margin-bottom:10%" class="login-card">
         <form id="form" method="post" action="{{ route('sign.up.pacient') }}">
             @csrf
             <div class="row">

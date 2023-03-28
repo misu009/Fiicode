@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Profil pacient</title>
-
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     {{-- BOOTSTRAP --}}
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
         integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
@@ -31,7 +31,12 @@
 </head>
 
 <body>
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="[
+        '/pacient' => 'Acasa',
+        '/pacient/istoric_medical' => 'Istoric Medical',
+        '/pacient/program' => 'Programari',
+        '/logout' => 'Deconecteaza-te',
+    ]"></x-navbar>
     <x-alert></x-alert>
 
     <section class="carusel-section">

@@ -25,13 +25,13 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/CSS/program_pacient.css" />
     <title>Program Pacient</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
     <x-navbar :navbar-links="[
-        '/login' => 'Acasa',
-        '/pacient/login' => 'Istoric Medical',
-        '/pacient/login' => 'Fisa medicala',
+        '/pacient' => 'Acasa',
+        '/pacient/istoric_medical' => 'Istoric Medical',
         '/pacient/program' => 'Programari',
         '/logout' => 'Deconecteaza-te',
     ]"></x-navbar>

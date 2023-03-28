@@ -27,13 +27,15 @@
     <link href="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/css/select2.min.css" rel="stylesheet" />
     <script src="https://cdn.jsdelivr.net/npm/select2@4.1.0-rc.0/dist/js/select2.min.js"></script>
     <title>Lista Pacienti</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
 
     <x-navbar :navbar-links="[
-        '/login' => 'Acasa',
+        '/doctor' => 'Acasa',
         '/doctor/program' => 'Programari',
+        '/doctor/pacienti' => 'Pacienti',
         '/logout' => 'Deconecteaza-te',
     ]"></x-navbar>
     <x-alert></x-alert>

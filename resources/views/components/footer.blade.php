@@ -29,7 +29,8 @@
                     <ul class="list-unstyled text-center">
                         <li><a href="/des_noi">Despre noi</a></li>
                         <li><a
-                                href="https://mail.google.com/mail/?view=cm&to=medicalcompany133@gmail.com">Contacteaza-ne</a>
+                                href="￼
+https://mail.google.com/mail/?view=cm&to=medicalcompany133@gmail.com">Contacteaza-ne</a>
                         </li>
                     </ul>
                 </div>

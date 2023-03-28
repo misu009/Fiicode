@@ -1,5 +1,5 @@
-body{
-    font-family: 'Montserrat' ,sans-serif;
+body {
+    font-family: 'Montserrat', sans-serif;
 }
 
 a {
@@ -7,14 +7,13 @@ a {
 }
 
 .navbar {
-    height: 70px;
-
+    min-height: 6vh;
     width: 95%;
     margin: 10px auto;
     border-radius: 27px;
     -webkit-box-shadow: 9px 8px 26px 3px rgba(46, 46, 46, 0.41);
-        box-shadow: 9px 8px 26px 3px rgba(46, 46, 46, 0.41);
-         background-color: rgb(255, 255, 255);
+    box-shadow: 9px 8px 26px 3px rgba(46, 46, 46, 0.41);
+    background-color: rgb(255, 255, 255);
 }
 
 .navbar-brand {
@@ -28,8 +27,7 @@ a {
     color: rgb(11, 146, 47);
 }
 
-:hover.nav-link
-{
+:hover.nav-link {
     color: rgb(32, 32, 32);
 
 }
@@ -44,23 +42,23 @@ a {
     }
 
     .navbar-nav .nav-link {
-        margin-left: 9%;
+        margin-left: 0%;
     }
 }
 
-.toggle
-{
+.toggle {
     font-size: 20px;
-     background-color: rgb(255, 255, 255);
+    background-color: rgb(255, 255, 255);
     color: rgb(11, 146, 47);
 }
 
-.nav-links
-{
-    margin-left:-10%;
+.nav-links {
+    margin-left: -10%;
 
 }
-.plus
-{
+
+.plus {
     margin-left: 30px;
 }
+
+

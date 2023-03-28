@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="['/' => 'Acasa', '/tutorial' => 'Tutorial', 'des_noi' => 'Despre noi']"></x-navbar>
     <x-alert></x-alert>
     <div style="margin-top: 2%;" class="login-card">
         <form id="form" method="post" action="{{ route('sign.up.pacient') }}">

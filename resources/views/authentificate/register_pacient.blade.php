@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="['/' => 'Acasa', '/tutorial' => 'Tutorial', 'des_noi' => 'Despre noi']"></x-navbar>
     <x-alert></x-alert>
     <section style="margin-top: 2%;" class="inregistrare">
         <div class="card-group ">

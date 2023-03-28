@@ -31,7 +31,11 @@
 
 <body>
 
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="[
+        '/login' => 'Acasa',
+        '/doctor/program' => 'Programari',
+        '/logout' => 'Deconecteaza-te',
+    ]"></x-navbar>
     <x-alert></x-alert>
     <section class="selection">
         <div style="text-align: center" class="row">

@@ -31,7 +31,13 @@
 </head>
 
 <body>
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
+    <x-navbar :navbar-links="[
+        '/login' => 'Acasa',
+        '/pacient/login' => 'Istoric Medical',
+        '/pacient/login' => 'Fisa medicala',
+        '/pacient/program' => 'Programari',
+        '/logout' => 'Deconecteaza-te',
+    ]"></x-navbar>
     <x-alert></x-alert>
     <section style="margin-top:20%;padding-bottom:10%" class="profile">
         <form method="POST" class="edit-info" action="{{ route('pacient.pacient.update') }}"

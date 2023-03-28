@@ -30,9 +30,9 @@
                 </button>
                 <div class="justify-content-center collapse navbar-collapse" id="navbarSupportedContent">
                     <ul class="nav-links navbar-nav">
-                        @foreach ($navbarLinks as $link)
+                        @foreach ($navbarLinks as $link => $nume)
                             <li class="nav-item">
-                                <a class="nav-link" aria-current="page" href="/">{{ $link }}
+                                <a class="nav-link" aria-current="page" href="{{ $link }}">{{ $nume }}
                                     @if ($link == 'Deconecteaza-te')
                                         <i class="fa-solid fa-door-open"></i>
                                     @endif

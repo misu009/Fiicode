@@ -192,16 +192,8 @@
         {{-- ///MODAL --}}
     </div>
     </div>
+    <x-footer></x-footer>
 </body>
 
+
 </html>
-
-{{-- <th scope="row"></th>
-                        <td></td>
-                        <td></td>
-                        <td></td>
-                        <td>
-                            <div class="edit-div" style=" height:40px; overflow: auto;">
-                            </div>
-
-                        </td> --}}

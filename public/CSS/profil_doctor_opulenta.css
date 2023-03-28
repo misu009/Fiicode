@@ -1,0 +1,190 @@
+body {
+    font-family: 'Montserrat', sans-serif;
+}
+
+h2 {
+    font-size: 1.5rem;
+    ;
+}
+
+.profile {
+    margin-top: 10%;
+}
+
+.profile-pic {
+    color: transparent;
+    transition: all 0.3s ease;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    transition: all 0.3s ease;
+}
+
+.profile-pic input {
+    display: none;
+}
+
+.profile-pic img {
+    position: absolute;
+    object-fit: cover;
+    width: 300px;
+    height: 300px;
+    box-shadow: 0 0 10px 0 rgba(255, 255, 255, 0.35);
+    border-radius: 100%;
+    z-index: 0;
+}
+
+.profile-pic .-label {
+    cursor: pointer;
+    height: 300px;
+    width: 300px;
+}
+
+.profile-pic:hover .-label {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(0, 0, 0, 0.8);
+    z-index: 10000;
+    color: #fafafa;
+    transition: background-color 0.2s ease-in-out;
+    border-radius: 100%;
+    margin-bottom: 0;
+}
+
+.profile-pic span {
+    display: inline-flex;
+    padding: 0.2em;
+    height: 2em;
+}
+
+body a:hover {
+    text-decoration: none;
+}
+
+
+.input-register {
+    margin-top: 0.5rem;
+    /* margin-bottom: 0.5rem; */
+    border: solid;
+    border-color: rgb(194, 194, 194);
+    border-width: 1px;
+    border-radius: 10px;
+    padding: 0.4rem;
+    width: 35%;
+    margin-bottom: 2rem;
+    background-color: rgb(240, 240, 240);
+
+}
+
+.submit-login {
+    margin: 1rem;
+    padding: 0.5rem;
+    width: 25%;
+    height: 3rem;
+    border-radius: 20px;
+    -webkit-box-shadow: 5px 5px 20px -9px #363636;
+    box-shadow: 5px 5px 20px -9px #363636;
+}
+
+.row-form {
+
+    /* margin-top: 10%; */
+    text-align: center;
+}
+
+
+.input-adresa {
+    width: 100%;
+}
+
+#atestat {
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.col-pp {
+    /* padding-top: 10vh; */
+}
+
+@media (max-width : 660px) {
+    .input-register {
+        width: 90%;
+    }
+
+    .adresa-row {
+        width: 100%;
+    }
+
+    .submit-login {
+        width: 50%;
+    }
+    .input-adresa{
+        width: 100%;
+    }
+}
+
+.edit-info {
+    margin-top: -5%;
+    margin-bottom: 5%;
+}
+
+.carusel-section {
+    text-align: center;
+}
+
+.carousel {
+    margin-top: 5%;
+
+
+}
+
+.img-carousel {
+    border-radius: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    width: 600px;
+}
+
+.arrows {
+    color: black;
+    font-size: 2.5rem;
+}
+
+hr {
+    margin-top: 5%;
+    border: solid;
+    border-width: 0.3rem;
+    color: rgb(189, 189, 189);
+}
+
+.input-card {
+    margin-top: 10px;
+    border-radius: 46px;
+    background: #ffffff;
+    box-shadow: 41px 41px 100px #c7c7c7,
+        -41px -41px 100px #ffffff;
+    width: 50%;
+}
+
+.input-istoric {
+    padding-top: 5%;
+    padding-bottom: 5%;
+}
+ .pp-img
+ {
+    width: 200px;
+    margin-top: 7%;
+ }
+ .date-medic
+ {
+   margin-left: auto;
+   margin-right: auto;
+ }
+
+.adresa-row {
+    margin-left: auto;
+    margin-right: auto;
+    width: 50%;
+}

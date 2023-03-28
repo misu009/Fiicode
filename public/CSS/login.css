@@ -26,6 +26,7 @@ a{
     margin-top: 15%;
     border-radius: 20px;;
     padding-bottom: 0.7rem;
+
 }
 .label-text
 {
@@ -115,5 +116,9 @@ input[type="text"]:focus {
         max-width: 90%;
         width: 80%;
     }
+}
+.login
+{
+    padding-bottom: 5%;
 }
 

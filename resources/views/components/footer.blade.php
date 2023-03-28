@@ -17,6 +17,9 @@
     <link rel="stylesheet" href="/CSS/footer_style.css" />
 </head>
 
+<link rel="stylesheet" href="/CSS/footer_style.css" />
+</head>
+
 <body>
     <footer class="bg-light py-3">
         <div class="container">
@@ -54,5 +57,6 @@
         </div>
     </footer>
 </body>
+
 
 </html>

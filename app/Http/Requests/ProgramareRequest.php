@@ -2,7 +2,9 @@
 
 namespace App\Http\Requests;
 
+use App\Models\Programare;
 use Illuminate\Foundation\Http\FormRequest;
+use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Session;
 use Illuminate\Validation\Rule;
 
@@ -13,7 +15,7 @@ class ProgramareRequest extends FormRequest
      *
      * @return array<string, \Illuminate\Contracts\Validation\Rule|array|string>
      */
-    public function rules(): array
+    public function rules(Request $request): array
     {
         if (Session::get('doctor')) {
             return [

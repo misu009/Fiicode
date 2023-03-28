@@ -35,23 +35,25 @@
     <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
     <x-alert></x-alert>
     <section class="profile">
-        <div class="row">
-            <form class="edit-info" method="POST" action="{{ route('doctor.doctor.update') }}"
-                enctype="multipart/form-data">
-                <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
-                    @csrf
-                    <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
-                        <div class="profile-pic">
-                            <label class="-label" for="poza_profil">
-                                <span class="glyphicon glyphicon-camera"></span>
-                                <span>Change Image</span>
-                            </label>
-                            <input id="poza_profil" name="poza_profil" type="file" onchange="loadFile(event)" />
-                            <img src="{{ $doctor->poza_profil ?: 'images/default-pp.png' }}" id="output"
-                                width="200" />
-                        </div>
+        <form class="row-form " method="POST" action="{{ route('doctor.doctor.update') }}"
+            enctype="multipart/form-data">
+            <div class="row">
+
+                @csrf
+                <div class="col-pp col col-lg-4 col-md-12 col-sm-12 col-12 ">
+                    <div class="profile-pic">
+                        <label class="-label" for="poza_profil">
+                            <span class="glyphicon glyphicon-camera"></span>
+                            <span>Change Image</span>
+                        </label>
+                        <input id="poza_profil" name="poza_profil" type="file" onchange="loadFile(event)" />
+                        <img src="{{ $doctor->poza_profil ?: 'images/default-pp.png' }}" id="output"
+                            width="200" />
                     </div>
-                    <div class="row-form row">
+                </div>
+
+                <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
+                    <div class="row">
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <h2>Informatii personale</h2>
                         </div>
@@ -110,8 +112,9 @@
                         </div>
                     </div>
                 </div>
-            </form>
-        </div>
+            </div>
+        </form>
+
     </section>
 </body>
 <x-footer></x-footer>

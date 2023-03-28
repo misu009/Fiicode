@@ -1,8 +1,10 @@
 <?php
 
 use App\Http\Controllers\DoctorController;
+use App\Http\Controllers\EmailController;
 use App\Http\Controllers\LoginController;
 use App\Http\Controllers\PacientController;
+use App\Http\Controllers\PacientListController;
 use App\Http\Controllers\ProgramareController;
 use Illuminate\Support\Facades\Route;
 
@@ -35,6 +37,8 @@ Route::group(['middleware' => ['pacient'], 'prefix' => 'pacient'], function () {
     Route::get('/program', [ProgramareController::class, 'index'])->name('pacient.programare.index');
     Route::get('/program/data', [ProgramareController::class, 'getIndexDate'])->name('pacient.programare.data');
     Route::post('/program/add', [ProgramareController::class, 'addProgramarePacient'])->name('pacient.programare.add');
+    Route::put('program/update', [ProgramareController::class, 'updatePacient'])->name('pacient.programare.update');
+    Route::delete('program/delete/{programare}', [ProgramareController::class, 'delete'])->name('pacient.programare.delete');
 });
 
 Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
@@ -44,8 +48,13 @@ Route::group(['middleware' => ['doctor'], 'prefix' => 'doctor'], function () {
     Route::get('/program', [ProgramareController::class, 'index'])->name('doctor.programare.index');
     Route::get('/program/data', [ProgramareController::class, 'getIndexDate'])->name('doctor.programare.data');
     Route::post('/program/add', [ProgramareController::class, 'addProgramareDoctor'])->name('doctor.programare.add');
-    Route::put('/program/update', [ProgramareController::class, 'update'])->name('doctor.programare.update');
+    Route::put('/program/update', [ProgramareController::class, 'updateDoctor'])->name('doctor.programare.update');
     Route::delete('program/delete/{programare}', [ProgramareController::class, 'delete'])->name('doctor.programare.delete');
+
+    Route::get('/pacienti', [PacientListController::class, 'index'])->name('doctor.pacienti.index');
+    Route::post('/pacient', [PacientListController::class, 'getPacient'])->name('doctor.pacienti.get');
+    Route::get('/pacient/{id}', [PacientListController::class, 'indexPacient'])->name('doctor.pacient.index');
+    Route::post('/pacient/add', [PacientListController::class, 'add'])->name('doctor.pacient.add');
 });
 
 Route::get('/profil_doctor', function () {

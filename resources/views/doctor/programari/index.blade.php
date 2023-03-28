@@ -36,8 +36,8 @@
                 <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                     <h1>Introduceti data</h1>
                 </div>
-                <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input class="date-input"
-                        type="date"name="data" value="{{ isset($data) ? $data : null }}" required>
+                <div class="col col-lg-12 col-md-12 col-sm-12 col-12"><input class="date-input" type="date"
+                        name="data" value="{{ isset($data) ? $data : null }}">
                 </div>
                 <div class="date-buttons">
                     <button type="submit" name="action" value="find" class="submit-login btn btn-success">Arata
@@ -94,7 +94,6 @@
                                         <button type="submit" class="delete-btn btn btn-danger"><i
                                                 class=" fa-solid fa-trash"></i></button>
                                     </form>
-
                                 </td>
 
                             </tr>
@@ -116,13 +115,14 @@
         @include('doctor.programari.edit')
         @include('doctor.programari.add')
     </div>
-
+    {{-- <x-footer></x-footer> --}}
 </body>
 
 </html>
 
 <script>
     function editProgramare(id, email, data, ora, importanta, descriere) {
+        ora = ora.slice(0, -3);
         const input1 = document.getElementById('id');
         input1.value = id;
         const input2 = document.getElementById('data');

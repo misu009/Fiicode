@@ -75,9 +75,14 @@ Route::get('/tutorial', function () {
     return view('footer_links/tutorial');
 });
 
-Route::get('/des_noi', function () {
-    return view('footer_links/des_noi');
+Route::get('/profil_pacient_istoric', function () {
+    return view('profiles/profil_pacient_istoric');
 });
+
+Route::get('/doctor_opulenta', function () {
+    return view('profiles/doctor_opulenta');
+});
+
 
 Route::get('/lista_pacienti', function () {
     return view('doctor/programari/lista_pacienti');

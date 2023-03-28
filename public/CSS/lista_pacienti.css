@@ -26,7 +26,7 @@ body {
     box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
 }
 
-.details-btn {
+.details-btn, .transfer-btn {
     /* font-size: 13px; */
     /* padding: 0.5rem; */
     /* width: 12rem; */
@@ -34,6 +34,10 @@ body {
     border-radius: 20px;
     -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
     box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
+}
+.details-btn
+{
+    margin-right: 4px;
 }
 
 .select-input {
@@ -105,7 +109,7 @@ body {
         font-size: 0.8rem;
         width: 80%;
     }
-    .details-btn {
+    .details-btn .trasnfer-btn {
         font-size: 0.5rem;
         margin-top: 0px;
     }
@@ -121,6 +125,7 @@ body {
     padding: 0.4rem;
     width: 80%;
     margin-bottom: 2rem;
+
 }
 .modal-title {
     margin-left: auto;
@@ -132,6 +137,45 @@ body {
 }
 .add {
     margin-left: 5px;
+}
+
+.select2-form
+{
+    text-align: center;
+}
+.select-input
+{
+    text-align: center;
+}
+
+/* SELECT2 */
+
+.select2-dropdown.select2-dropdown--below {
+    border-radius: 10px;
+    width: 600px !important;
+}
+
+.select2-container--default .select2-selection--single {
+    height: 30px;
+    border-radius: 10px;
+    width: 600px;
+    font-size: 1.2rem;
+    position: relative;
+    left: 20%;
+
+}
+
+.select2-container--default .select2-selection--single .select2-selection__arrow {
+border-radius: 10px;
+    width: 440px;
+    color: #ffffff;
+    font-size: 2.3em;
+    padding: 4px 12px;
+    height: 27px;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+    width: 20px;
 }
 
 .select2-container {

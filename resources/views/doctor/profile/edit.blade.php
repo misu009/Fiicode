@@ -31,6 +31,7 @@
 </head>
 
 <body>
+
     <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
     <x-alert></x-alert>
     <section class="profile">
@@ -116,5 +117,6 @@
 
     </section>
 </body>
+<x-footer></x-footer>
 
 </html>

@@ -26,7 +26,7 @@
 </head>
 
 <body>
-    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil']"></x-navbar>
+    <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari']"></x-navbar>
     <x-alert></x-alert>
     <section class="login">
         <div class="login-card">

@@ -7,12 +7,17 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Footer</title>
     <!-- BOOTSTRAP -->
+
+
     <!-- FONTSAWESOME -->
     <script src="https://kit.fontawesome.com/b3f61e5fba.js" crossorigin="anonymous"></script>
 
     <!-- GOOGLE FONTS -->
     <!-- CSS -->
     <link rel="stylesheet" href="/CSS/footer_style.css" />
+</head>
+
+<link rel="stylesheet" href="/CSS/footer_style.css" />
 </head>
 
 <body>
@@ -22,7 +27,7 @@
                 <div class="col-md-3">
                     <h5 class="text-center">Navigatie</h5>
                     <ul class="list-unstyled text-center">
-                        <li><a href="/des_noi">Despre noi</a></li>
+                        {{-- <li><a href="{{ route('des_noi') }}">Despre noi</a></li> --}}
                         <li><a
                                 href="https://mail.google.com/mail/?view=cm&to=medicalcompany133@gmail.com">Contacteaza-ne</a>
                         </li>
@@ -31,7 +36,7 @@
                 <div class="col-md-3">
                     <h5 class="text-center">Documentatie</h5>
                     <ul class="list-unstyled text-center">
-                        <li><a href="/tutorial">Tutorial</a></li>
+                        {{-- <li><a href="{{ route('tutorial') }}">Tutorial</a></li> --}}
                     </ul>
                 </div>
                 <div class="col-md-3 text-md-end">
@@ -52,5 +57,6 @@
         </div>
     </footer>
 </body>
+
 
 </html>

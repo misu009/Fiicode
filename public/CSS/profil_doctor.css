@@ -80,7 +80,6 @@ body a:hover {
     border-radius: 20px;
 }
 
-
 .adresa-row {
     margin-left: auto;
     margin-right: auto;
@@ -117,4 +116,5 @@ body a:hover {
 .row-form {
     text-align: center;
     margin-top: 10%;
+    padding-bottom: 15%;
 }

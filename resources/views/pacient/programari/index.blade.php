@@ -73,7 +73,7 @@
                                         onclick="editProgramare({{ $programare->id }}, '{{ $date }}', '{{ $time }}')">
                                         <i class="fa-solid fa-pencil"></i>
                                     </button>
-                                    <form method="POST" class="btn-danger"
+                                    <form style="width:30px;display:inline-block" method="POST" class="btn-danger"
                                         action="{{ route('pacient.programare.delete', $programare->id) }}">
                                         @csrf
                                         @method('DELETE')
@@ -93,7 +93,7 @@
         </div>
     </div>
     {{--  --}}
-    <div class="btn-modal col col-lg-12 col-md-12 col-sm-12 col-12">
+    <div style="padding-bottom: 10%" class="btn-modal col col-lg-12 col-md-12 col-sm-12 col-12">
         <button type="button" class="submit-login1 btn btn-success" data-bs-toggle="modal"
             data-bs-target="#addProgramare">
             Faceti o programare
@@ -102,6 +102,7 @@
         @include('pacient.programari.add')
     </div>
     </div>
+    <x-footer></x-footer>
 </body>
 
 </html>

@@ -33,7 +33,7 @@
 <body>
     <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
     <x-alert></x-alert>
-    <section class="profile">
+    <section style="margin-top:20%;padding-bottom:10%" class="profile">
         <form method="POST" class="edit-info" action="{{ route('pacient.pacient.update') }}"
             enctype="multipart/form-data">
             <div class="row">
@@ -51,7 +51,7 @@
                     </div>
                 </div>
                 <div class="col col-lg-8 col-md-12 col-sm-12 col-12">
-                    <div class=" row">
+                    <div style="text-align: center" class=" row">
 
                         <div class="col col-lg-12 col-md-12 col-sm-12 col-12">
                             <h2>Informatii personale</h2>
@@ -112,6 +112,7 @@
         </form>
 
     </section>
+    <x-footer></x-footer>
 </body>
 
 </html>

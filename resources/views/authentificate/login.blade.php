@@ -66,7 +66,13 @@
 
 
     </section>
-    <x-footer></x-footer>
+    <div class="row">
+        <div class="col col-lg-12">
+            <x-footer></x-footer>
+        </div>
+
+    </div>
+
 </body>
 
 </html>

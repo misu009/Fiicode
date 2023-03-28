@@ -34,19 +34,24 @@
     <x-navbar :navbar-links="['Acasa', 'Istoric medical', 'Fisa medicala', 'Programari', 'Profil', 'Deconecteaza-te']"></x-navbar>
     <x-alert></x-alert>
     <section class="selection">
-        <div class="select-input">
-            <form action="{{ route('doctor.pacienti.get') }}" method="post">
-                @csrf
-                <select class="select2" name="pacient">
+        <div style="text-align: center" class="row">
+            <form action="{{ route('doctor.pacienti.get') }}" method="post">@csrf
+                <select class="select2_1" name="pacient">
                     <option>Adauga pacient</option>
                     @foreach ($pacienti as $pacient)
-                        <option value="{{ $pacient->email }}">{{ $pacient->nume . ' ' . $pacient->prenume }}</option>
+                        <option value="{{ $pacient->email }}">{{ $pacient->nume . ' ' . $pacient->prenume }}
+                        </option>
                     @endforeach
                 </select>
-                <button class="submit-login btn btn-success">Vezi mai multe informatii
+                <div class="col col-lg-12"><button style="margin-top:25px " class="submit-login btn btn-success">Vezi
+                        mai multe
+                        informatii</button>
+                </div>
             </form>
         </div>
     </section>
+
+
 
     <section class="table-section">
         @if (!$pacienti->isEmpty())
@@ -73,6 +78,9 @@
                             <td class="details-col" scope="col">
                                 <button class="details-btn btn btn-primary"><i
                                         class="fa-solid fa-circle-info"></i></button>
+                                <button data-bs-toggle="modal" data-bs-target="#transfer-pacient-Modal"
+                                    class="transfer-btn btn btn-warning"><i
+                                        class="fa-solid fa-diamond-turn-right"></i></button>
                             </td>
                         </tr>
                     @endforeach
@@ -87,17 +95,59 @@
 
     </section>
 
-    <section style="width: 100%;margin-top:5%;text-align:center;">
+    <section class="last-section" style="width: 100%;margin-top:5%;text-align:center;padding-bottom:10%">
         </button><button type="button" class="add submit-login btn btn-outline-success" data-bs-toggle="modal"
             data-bs-target="#add-pacient-Modal">
             Adauga un pacient
         </button>
         @include('doctor.pacienti.add')
     </section>
+    <x-footer></x-footer>
+
+
+    {{-- MODALA --}}
+    <div class="modal fade" id="transfer-pacient-Modal" tabindex="-1" aria-labelledby="add-pacient-Modal"
+        aria-hidden="true">
+        <div class="modal-md modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h1 class="modal-title">Transfera Pacientul</h1>
+                </div>
+                <div class="edit-modal-body modal-body">
+                    <form action="">
+                        <section class="selection">
+                            <div class="select-input">
+                                <form action="" method="post">
+                                    @csrf
+                                    <select class="select2" name="pacient">
+                                        <option>Adauga pacient</option>
+                                        <option value="WY">Wyomind</option>
+                                        <option value="Al">Alabama</option>
+                                        {{-- @foreach ($pacienti as $pacient)
+                        <option value="{{ $pacient->email }}">{{ $pacient->nume . ' ' . $pacient->prenume }}</option>
+                    @endforeach --}}
+                                    </select>
+                            </div>
+                            <div style="margin-top:10px; text-align: center "><button
+                                    class="submit-login btn btn-success">Transfera</button></div>
+
+                    </form>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
 
 </body>
+
+</html>
 <script>
     $(document).ready(function() {
-        $('.select2').select2();
+        $('.select2').select2({
+            placeholder: "mami",
+            dropdownParent: $('#transfer-pacient-Modal'),
+        });
+        $('.select2_1').select2();
     });
 </script>

@@ -8,6 +8,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"
         integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous">
     </script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.3/jquery.min.js"></script>
     {{-- GOOGLE FONTS --}}
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -68,7 +69,7 @@
                                 <th scope="row">{{ $date }}</th>
                                 <td>{{ $time }}</td>
                                 <td class="edit-col"><button type="button" class="edit-btn btn btn-primary"
-                                        data-bs-toggle="modal" data-bs-target="#editModal"
+                                        data-bs-toggle="modal" data-bs-target="#editProgramare"
                                         onclick="editProgramare({{ $programare->id }}, '{{ $date }}', '{{ $time }}')">
                                         <i class="fa-solid fa-pencil"></i>
                                     </button>
@@ -94,7 +95,7 @@
     {{--  --}}
     <div class="btn-modal col col-lg-12 col-md-12 col-sm-12 col-12">
         <button type="button" class="submit-login1 btn btn-success" data-bs-toggle="modal"
-            data-bs-target="#exampleModal">
+            data-bs-target="#addProgramare">
             Faceti o programare
         </button>
         @include('pacient.programari.edit')
@@ -107,6 +108,7 @@
 
 <script>
     function editProgramare(id, data, ora) {
+        ora = ora.slice(0, -3);
         const input1 = document.getElementById('id');
         input1.value = id;
         const input2 = document.getElementById('data');
@@ -114,4 +116,13 @@
         const input3 = document.getElementById('ora');
         input3.value = ora;
     }
+    @if ($errors->any() and !$errors->has('id'))
+        $(document).ready(function() {
+            $("#{{ Illuminate\Support\Facades\Session::get('modal') }}").modal('show');
+        });
+    @else
+        @php
+            Illuminate\Support\Facades\Session::forget('modal');
+        @endphp
+    @endif
 </script>

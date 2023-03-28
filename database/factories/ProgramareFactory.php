@@ -17,9 +17,9 @@ class ProgramareFactory extends Factory
     public function definition(): array
     {
         return [
-            'doctor_id' => fake()->randomElement([1, 2]),
+            'doctor_id' => 2,
             'pacient_id' => fake()->randomElement([1, 2]),
-            'data' => fake()->dateTimeInInterval("", "2 weeks"),
+            'data' => fake()->dateTimeBetween('-2 weeks', '2 weeks')->format('Y:m:d H-i'),
             'importanta' => fake()->randomElement(['danger', 'warning', 'success']),
             'description' => fake()->text(),
         ];

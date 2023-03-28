@@ -13,6 +13,6 @@ class ProgramSeeder extends Seeder
      */
     public function run(): void
     {
-        Programare::factory()->count(1000)->create();
+        Programare::factory()->count(200)->create();
     }
 }

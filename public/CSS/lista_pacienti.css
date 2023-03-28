@@ -26,7 +26,8 @@ body {
     box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
 }
 
-.details-btn, .transfer-btn {
+.details-btn,
+.transfer-btn {
     /* font-size: 13px; */
     /* padding: 0.5rem; */
     /* width: 12rem; */
@@ -35,8 +36,7 @@ body {
     -webkit-box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
     box-shadow: 0px 10px 28px -1px rgba(28, 28, 28, 0.41);
 }
-.details-btn
-{
+.details-btn {
     margin-right: 4px;
 }
 
@@ -84,7 +84,20 @@ body {
     width: 10px;
 }
 
+.select2_1,
+.select2-container,
+.select2-container--default,
+.select2-container--below,
+.select2-container--focus {
+    width: 80%;
+}
+
 @media (max-width: 760px) {
+    .select2,
+    .select2-container,
+    .select2-container--default {
+        width: 80%;
+    }
     .submit-login {
         font-size: 0.8rem;
         width: 30%;
@@ -95,6 +108,14 @@ body {
 }
 
 @media (max-width: 500px) {
+    .last-section {
+        margin-bottom: 30%;
+    }
+    .select2,
+    .select2-container,
+    .select2-container--default {
+        width: 80%;
+    }
     .table {
         width: 100%;
     }
@@ -125,7 +146,6 @@ body {
     padding: 0.4rem;
     width: 80%;
     margin-bottom: 2rem;
-
 }
 .modal-title {
     margin-left: auto;
@@ -137,76 +157,4 @@ body {
 }
 .add {
     margin-left: 5px;
-}
-
-.select2-form
-{
-    text-align: center;
-}
-.select-input
-{
-    text-align: center;
-}
-
-/* SELECT2 */
-
-.select2-dropdown.select2-dropdown--below {
-    border-radius: 10px;
-    width: 600px !important;
-}
-
-.select2-container--default .select2-selection--single {
-    height: 30px;
-    border-radius: 10px;
-    width: 600px;
-    font-size: 1.2rem;
-    position: relative;
-    left: 20%;
-
-}
-
-.select2-container--default .select2-selection--single .select2-selection__arrow {
-border-radius: 10px;
-    width: 440px;
-    color: #ffffff;
-    font-size: 2.3em;
-    padding: 4px 12px;
-    height: 27px;
-    position: absolute;
-    top: 0px;
-    right: 0px;
-    width: 20px;
-}
-
-.select2-container {
-    width: 100%;
-    border-radius: 10px;
-    border-color: rgb(201, 201, 201);
-}
-
-.select2-container .select2-selection--single {
-    height: auto;
-    padding: 10px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-}
-
-.select2-container--default
-    .select2-selection--single
-    .select2-selection__arrow {
-    height: auto;
-    right: 10px;
-}
-
-.select2-container--default
-    .select2-selection--single
-    .select2-selection__rendered {
-    line-height: 1.5;
-}
-
-/* Add the following CSS to make the Select2 responsive */
-@media (max-width: 768px) {
-    .select2-container {
-        width: 100%;
-    }
 }

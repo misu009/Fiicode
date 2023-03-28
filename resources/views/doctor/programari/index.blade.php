@@ -87,7 +87,7 @@
                                         onclick="editProgramare({{ $programare->id }}, '{{ $pacient->email }}', '{{ $date }}', '{{ $time }}', '{{ $programare->importanta }}', '{{ $programare->description }}')">
                                         <i class="fa-solid fa-pencil"></i>
                                     </button>
-                                    <form method="POST" class="btn-danger"
+                                    <form class="form-delete" method="POST"
                                         action="{{ route('doctor.programare.delete', $programare->id) }}">
                                         @csrf
                                         @method('DELETE')
@@ -106,17 +106,24 @@
                 <div class="d-flex justify-content-center">Nu aveti programari..</div>
             @endif
         </div>
+
+        <div class="btn-modal col col-lg-12 col-md-12 col-sm-12 col-12">
+            <button type="button" class="submit-login1 btn btn-success" data-bs-toggle="modal"
+                data-bs-target="#addProgramare">
+                Adauga o programare
+            </button>
+            @include('doctor.programari.edit')
+            @include('doctor.programari.add')
+        </div>\
+        <div class="col col-lg-12">
+            <x-footer></x-footer>
+        </div>
+
     </div>
-    <div class="btn-modal col col-lg-12 col-md-12 col-sm-12 col-12">
-        <button type="button" class="submit-login1 btn btn-success" data-bs-toggle="modal"
-            data-bs-target="#addProgramare">
-            Adauga o programare
-        </button>
-        @include('doctor.programari.edit')
-        @include('doctor.programari.add')
-    </div>
-    {{-- <x-footer></x-footer> --}}
+
+
 </body>
+
 
 </html>
 

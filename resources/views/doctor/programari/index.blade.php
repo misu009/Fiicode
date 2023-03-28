@@ -25,12 +25,14 @@
         crossorigin="anonymous" referrerpolicy="no-referrer" />
     <link rel="stylesheet" href="/CSS/program_doctor.css" />
     <title>Program Dcotor</title>
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
 </head>
 
 <body>
     <x-navbar :navbar-links="[
-        '/login' => 'Acasa',
+        '/doctor' => 'Acasa',
         '/doctor/program' => 'Programari',
+        '/doctor/pacienti' => 'Pacienti',
         '/logout' => 'Deconecteaza-te',
     ]"></x-navbar>
     <section class="choose-date">

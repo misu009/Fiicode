@@ -7,9 +7,8 @@
 </head>
 
 <body>
-    FOloseste cocdul asta pentru a te inregistra la ruta: query-param
     <h1>{{ $subject }}</h1>
-    <p>{{ $body }}</p>
+    <p>Autentificati-va la urmatorul link: http://127.0.0.1:8000/register_pacient cu codul: {{ $body }}</p>
 </body>
 
 </html>

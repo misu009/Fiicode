@@ -25,7 +25,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&family=Ubuntu:wght@500&display=swap"
         rel="stylesheet">
-
+    <link rel="icon" type="image/x-icon" href="/images/favicon.ico">
     {{-- fontawesome --}}
     <script src="https://kit.fontawesome.com/4d408f9161.js" crossorigin="anonymous"></script>
 </head>
@@ -33,8 +33,9 @@
 <body>
 
     <x-navbar :navbar-links="[
-        '/login' => 'Acasa',
+        '/doctor' => 'Acasa',
         '/doctor/program' => 'Programari',
+        '/doctor/pacienti' => 'Pacienti',
         '/logout' => 'Deconecteaza-te',
     ]"></x-navbar>
     <section class="profile">
